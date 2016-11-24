@@ -1,13 +1,13 @@
 <?php
 
-namespace TenLord\Http\Controllers;
+namespace App\Http\Controllers;
 
-use TenLord\Unit;
+use App\Unit;
 use Illuminate\Http\Request;
 use Input;
 use Redirect;
-use TenLord\Tenant;
-use TenLord\Property;
+use App\Tenant;
+use App\Property;
 
 class TenantsController extends Controller
 {

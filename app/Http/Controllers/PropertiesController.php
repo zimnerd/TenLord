@@ -1,12 +1,12 @@
 <?php
 
-namespace TenLord\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Input;
 use Redirect;
-use TenLord\Property;
-use TenLord\Unit;
+use App\Property;
+use App\Unit;
 class PropertiesController extends Controller
 {
     //

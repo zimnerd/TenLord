@@ -1,6 +1,6 @@
 <?php
 
-namespace TenLord;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,16 +9,16 @@ class Property extends Model
     //
     public function units()
     {
-        return $this->hasMany('TenLord\Unit');
+        return $this->hasMany('App\Unit');
     }
 
     public function owner()
     {
-        return $this->belongsTo('TenLord\Owner');
+        return $this->belongsTo('App\Owner');
     }
     public function tenants()
     {
-        return $this->hasMany('TenLord\Tenant');
+        return $this->hasMany('App\Tenant');
     }
 
     protected $guarded = [];

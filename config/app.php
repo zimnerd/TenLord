@@ -173,11 +173,11 @@ return [
         /*
          * Application Service Providers...
          */
-        TenLord\Providers\AppServiceProvider::class,
-        TenLord\Providers\AuthServiceProvider::class,
-        // TenLord\Providers\BroadcastServiceProvider::class,
-        TenLord\Providers\EventServiceProvider::class,
-        TenLord\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
 
     ],
 
