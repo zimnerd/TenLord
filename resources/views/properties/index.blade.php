@@ -14,7 +14,7 @@
             @foreach( $properties as $property )
 
                 <?php
-                $img = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/properties/'.$propert->photos ));
+                $img = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/properties/'.$property->photos ));
 
                 $img->encode('png');
                 $type = 'png';
