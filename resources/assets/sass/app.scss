@@ -1,0 +1,155 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+label {
+  display: block;
+}
+
+.tenlist:nth-child(even){
+  background-color: #dedede;
+border-right: 5px solid #2579a9;
+border-bottom: 1px solid #2579a9;
+border-left: 5px solid #2579a9;
+border-top: 1px solid #2579a9;
+}
+
+div>.tenlist:nth-child(odd){
+background-color: rgba(211, 224, 233, 0.34);
+border-left: 5px solid #a94442;
+border-top: 1px solid #a94442;
+border-right: 5px solid #a94442;
+border-bottom: 1px solid #a94442;
+}
+
+div>.tenlist{padding: 5px;
+border-bottom: 1px solid #fefefe;
+margin-bottom: 10px;}
+
+
+
+$color_purple: #5133AB;
+$color_red: #AC193D;
+$color_orange: #DC572E;
+$color_green: #00A600;
+$color_blue: #2672EC;
+
+
+$base_font_size: 14px;
+$base_line_height: 1.5em;
+$text_font_family: 'Open Sans', "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+$display_font_family: 'Open Sans', "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+
+body {
+  font-family: $text_font_family;
+  font-size: $base_font_size;
+  line-height: $base_line_height;
+  font-weight: 400;
+}
+
+p, span, a, ul, li, button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+strong {
+  font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $display_font_family;
+  line-height: $base_line_height;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 400;
+}
+
+.tile {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+
+  .title {
+    margin-top: 0px;
+  }
+
+  &.purple, &.blue, &.red, &.orange, &.green {
+    color: #fff;
+  }
+
+  &.purple {
+    background: $color_purple;
+
+    &:hover {
+      background: darken($color_purple, 10%);
+    }
+  }
+
+  &.red {
+    background: $color_red;
+
+    &:hover {
+      background: darken($color_red, 10%);
+    }
+  }
+
+  &.green {
+    background: $color_green;
+
+    &:hover {
+      background: darken($color_green, 10%);
+    }
+  }
+
+  &.blue {
+    background: $color_blue;
+
+    &:hover {
+      background: darken($color_blue, 10%);
+    }
+  }
+
+  &.orange {
+    background: $color_orange;
+
+    &:hover {
+      background: darken($color_orange, 10%);
+    }
+  }
+}
+
+.panel-default > .panel-heading {
+  background-color: #d3e0e9;
+}
+
+.units .unit, .units .tenant{padding: 2px 0;}
+
+.featured img,.header-image img{
+  width:100%;
+  height:auto;}
+
+.featured{padding: 10px 20px 10px 7px;
+  max-height: 200px;
+  overflow: hidden;}
+
+.property-header{margin-bottom: 35px}
+
+.page-header {
+  padding-bottom: 10px;
+  margin: 0px 0 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+.profpic{width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%}

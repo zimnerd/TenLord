@@ -1,0 +1,41 @@
+const elixir = require('laravel-elixir');
+
+require('laravel-elixir-vue-2');
+
+/*
+ |--------------------------------------------------------------------------
+ | Elixir Asset Management
+ |--------------------------------------------------------------------------
+ |
+ | Elixir provides a clean, fluent API for defining some basic Gulp tasks
+ | for your Laravel application. By default, we are compiling the Sass
+ | file for your application as well as publishing vendor resources.
+ |
+ */
+
+
+elixir(function(mix) {
+    var bootstrapPath = 'node_modules/bootstrap-sass/assets';
+    mix.sass('app.scss')
+        .webpack('app.js')
+        .copy(bootstrapPath + '/fonts', 'tenlords/fonts')
+        .copy(bootstrapPath + '/javascripts/bootstrap.min.js', 'public/js');
+
+    mix.scripts([
+            '/node_modules/jquery/dist/jquery.min.js',
+            // list your other npm packages here
+        ],
+        'tenlords/js/vendor.js', // 2nd param is the output file
+        'node_modules')        // 3rd param is saying "look in /node_modules/ for these scripts"
+
+        .scripts([
+            'scripts.js'       // your custom js file located in default location: /resources/assets/js/
+        ], 'tenlords/js/app.js') // looks in default location since there's no 3rd param
+
+        .version([             // optionally append versioning string to filename
+            'js/vendor.js',    // compiled files will be in /public/build/js/
+            'js/app.js'
+        ]);
+
+
+});

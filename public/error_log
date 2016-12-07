@@ -1,0 +1,33 @@
+[07-Dec-2016 07:57:57 UTC] PHP Parse error:  syntax error, unexpected 'style' (T_STRING) in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 68
+[07-Dec-2016 08:08:04 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 68
+[07-Dec-2016 08:10:59 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 68
+[07-Dec-2016 08:11:26 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 68
+[07-Dec-2016 08:13:31 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 08:14:26 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 08:15:09 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 08:15:35 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 73
+[07-Dec-2016 08:15:55 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 73
+[07-Dec-2016 08:16:06 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 74
+[07-Dec-2016 08:16:32 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 08:17:00 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 08:17:22 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 74
+[07-Dec-2016 08:23:58 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 08:31:15 UTC] PHP Parse error:  syntax error, unexpected 'use' (T_USE), expecting identifier (T_STRING) or \\ (T_NS_SEPARATOR) in /home/zimnerds/public_html/laravel/app/Http/Controllers/HomeController.php on line 10
+[07-Dec-2016 08:34:31 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 10:45:10 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 10:47:35 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 10:51:16 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 10:51:55 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 10:52:31 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 10:52:36 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 10:55:00 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 10:55:03 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 10:55:09 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 71
+[07-Dec-2016 10:58:43 UTC] PHP Parse error:  syntax error, unexpected '!' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 74
+[07-Dec-2016 10:59:10 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 74
+[07-Dec-2016 10:59:46 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 74
+[07-Dec-2016 11:00:01 UTC] PHP Parse error:  syntax error, unexpected '/' in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 74
+[07-Dec-2016 11:30:18 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 69
+[07-Dec-2016 11:34:00 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 69
+[07-Dec-2016 11:42:45 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/tenlord/storage/framework/views/7f1ac7584cb420807c6555afc419dc68806265cb.php on line 69
+[07-Dec-2016 11:44:23 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/tenlord/storage/framework/views/7f1ac7584cb420807c6555afc419dc68806265cb.php on line 69
