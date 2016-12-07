@@ -30,7 +30,15 @@
 
 
 @if($property->photos != null)
-        <div class="col-md-6 header-image" ><img src="/images/properties/{{ $property->photos }}"></div>
+        <?php
+        $img = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/properties/'.$propert->photos ));
+
+        $img->encode('png');
+        $type = 'png';
+        $base64 = 'data:image/' . $type . ';base64,' . base64_encode($img);
+        ?>
+
+        <div class="col-md-6 header-image" ><img src="{!! $base64 !!}"></div>
     @else
         <div class="col-md-6 header-image" ><img src="/images/properties/Home.png"></div>
     @endif

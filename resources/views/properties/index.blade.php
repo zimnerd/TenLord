@@ -13,14 +13,20 @@
     @else
             @foreach( $properties as $property )
 
+                <?php
+                $img = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/properties/'.$propert->photos ));
 
+                $img->encode('png');
+                $type = 'png';
+                $base64 = 'data:image/' . $type . ';base64,' . base64_encode($img);
+                ?>
                 <div class="tenlist row">
 
 
                     {!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('properties.destroy', $property->id))) !!}
 
                         @if($property->photos != null)
-                            <div class="col-md-3 featured" ><img src="/images/properties/{{ $property->photos }}"></div>
+                            <div class="col-md-3 featured" ><img src="/images/properties/{!! $base64 !!}"></div>
                         @else
                             <div class="col-md-3 featured" ><img src="/images/properties/Home.png"></div>
                         @endif
