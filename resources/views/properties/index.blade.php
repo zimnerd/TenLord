@@ -12,7 +12,7 @@
         You have no properties
     @else
             @foreach( $properties as $property )
-
+                @if($property->photos != null)
                 <?php
                 $img = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/properties/'.$property->photos ));
 
@@ -20,6 +20,7 @@
                 $type = 'png';
                 $base64 = 'data:image/' . $type . ';base64,' . base64_encode($img);
                 ?>
+                @endif
                 <div class="tenlist row">
 
 
