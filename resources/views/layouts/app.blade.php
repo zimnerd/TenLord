@@ -64,9 +64,9 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
-                                    <img src="../storage/app/public/images/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%">
-                                 
-                                    
+                                    {{ Html::image('/images/avatars/'.Auth::user()->avatar.'', 'a picture', array('class' => 'profpic')) }}
+
+
                                     {{ Auth::user()->name }} <span class="caret"></span>
 </a>
 
