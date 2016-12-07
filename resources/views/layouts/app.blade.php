@@ -67,7 +67,7 @@
                                     {{ Html::image('/images/avatars/'.Auth::user()->avatar.'', Auth::user()->name, array('class' => 'profpic')) }}
 
                                     <?php
-                                    $img = Image::make(file_get_contents('/images/avatars/'.Auth::user()->avatar ));
+                                    $img = Image::make(file_get_contents('public/images/avatars/'.Auth::user()->avatar ));
                                     $img->encode('png');
                                     $type = 'png';
                                     $base64 = 'data:image/' . $type . ';base64,' . base64_encode($img);
