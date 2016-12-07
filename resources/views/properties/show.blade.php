@@ -7,16 +7,16 @@
     <div><span class="glyphicon glyphicon-home"></span> <a href="{{ route('properties.index', [$property->id]) }}">{{ ' ' .$property->count() . ' properties in total' }}</a></div>
     @foreach( $properties as $propert )
         <?php
-        $img = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/properties/'.$propert->photos ));
+        $imgss = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/properties/'.$propert->photos ));
 
-        $img->encode('png');
+        $imgss->encode('png');
         $type = 'png';
-        $base64 = 'data:image/' . $type . ';base64,' . base64_encode($img);
+        $base64ss = 'data:image/' . $type . ';base64,' . base64_encode($imgss);
         ?>
 
             @if($propert->photos != null)
                 <h3>{{ $propert->name }}</h3>
-                <div class="col-md-12 featured" > <a href="{{ route('properties.show', $propert->id) }}"><img src="{!! $base64 !!}" class="propertypic"></a></div>
+                <div class="col-md-12 featured" > <a href="{{ route('properties.show', $propert->id) }}"><img src="{!! $base64ss !!}" class="propertypic"></a></div>
             @else
                 <div class="col-md-12 featured" > <a href="{{ route('properties.show', $propert->id) }}"><img src="/images/properties/Home.png"></a></div>
             @endif
@@ -31,14 +31,14 @@
 
 @if($property->photos != null)
         <?php
-        $img = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/properties/'.$propert->photos ));
+        $imgsss = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/properties/'.$propert->photos ));
 
-        $img->encode('png');
+        $imgsss->encode('png');
         $type = 'png';
-        $base64 = 'data:image/' . $type . ';base64,' . base64_encode($img);
+        $base64sss = 'data:image/' . $type . ';base64,' . base64_encode($imgsss);
         ?>
 
-        <div class="col-md-6 header-image" ><img src="{!! $base64 !!}"></div>
+        <div class="col-md-6 header-image" ><img src="{!! $base64sss !!}"></div>
     @else
         <div class="col-md-6 header-image" ><img src="/images/properties/Home.png"></div>
     @endif
