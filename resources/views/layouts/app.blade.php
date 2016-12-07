@@ -72,6 +72,7 @@
                                     $type = 'png';
                                     $base64 = 'data:image/' . $type . ';base64,' . base64_encode($img);
                                     ?>
+
                                     <img src="{!! $base64 !!}">
 
                                     {{ Auth::user()->name }} <span class="caret"></span>
