@@ -18,19 +18,19 @@ elixir(function(mix) {
     var bootstrapPath = 'node_modules/bootstrap-sass/assets';
     mix.sass('app.scss')
         .webpack('app.js')
-        .copy(bootstrapPath + '/fonts', 'tenlords/fonts')
+        .copy(bootstrapPath + '/fonts', 'public/fonts')
         .copy(bootstrapPath + '/javascripts/bootstrap.min.js', 'public/js');
 
     mix.scripts([
             '/node_modules/jquery/dist/jquery.min.js',
             // list your other npm packages here
         ],
-        'tenlords/js/vendor.js', // 2nd param is the output file
+        'public/js/vendor.js', // 2nd param is the output file
         'node_modules')        // 3rd param is saying "look in /node_modules/ for these scripts"
 
         .scripts([
             'scripts.js'       // your custom js file located in default location: /resources/assets/js/
-        ], 'tenlords/js/app.js') // looks in default location since there's no 3rd param
+        ], 'public/js/app.js') // looks in default location since there's no 3rd param
 
         .version([             // optionally append versioning string to filename
             'js/vendor.js',    // compiled files will be in /public/build/js/
