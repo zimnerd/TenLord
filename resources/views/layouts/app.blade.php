@@ -68,6 +68,7 @@
 
                                     <?php
                                     $img = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/avatars/'.Auth::user()->avatar ));
+
                                     $img->encode('png');
                                     $type = 'png';
                                     $base64 = 'data:image/' . $type . ';base64,' . base64_encode($img);
