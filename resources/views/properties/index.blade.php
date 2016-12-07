@@ -27,7 +27,7 @@
                     {!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('properties.destroy', $property->id))) !!}
 
                         @if($property->photos != null)
-                            <div class="col-md-3 featured" ><img src="/images/properties/{!! $base64s !!}"></div>
+                            <div class="col-md-3 featured" ><img src="{!! $base64s !!}"></div>
                         @else
                             <div class="col-md-3 featured" ><img src="/images/properties/Home.png"></div>
                         @endif
