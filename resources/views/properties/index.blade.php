@@ -15,7 +15,7 @@
                 @if($property->photos != null)
                 <?php
                 $imgs = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/properties/'.$property->photos ));
-
+echo $imgs;
                 $imgs->encode('png');
                 $type = 'png';
                 $base64s = 'data:image/' . $type . ';base64,' . base64_encode($imgs);
