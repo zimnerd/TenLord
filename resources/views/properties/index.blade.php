@@ -1,5 +1,7 @@
 <!-- /resources/views/properties/index.blade.php -->
 @extends('layouts.app')
+@section('title', 'Properties Listing')
+@section('Sidebar', 'Quick Links')
 @section('content')
 
     @if ( !$properties->count() )
