@@ -2,6 +2,10 @@
 @extends('layouts.app')
 @section('title', 'Properties Listing')
 @section('Sidebar', 'Quick Links')
+@section('sidebar')
+    @parent
+   List your properties
+@endsection
 @section('content')
 
     @if ( !$properties->count() )
