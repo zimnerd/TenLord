@@ -64,8 +64,6 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
-                                    {{ Html::image('/images/avatars/'.Auth::user()->avatar.'', Auth::user()->name, array('class' => 'profpic')) }}
-
                                     <?php
                                     $img = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/avatars/'.Auth::user()->avatar ));
 
@@ -74,7 +72,8 @@
                                     $base64 = 'data:image/' . $type . ';base64,' . base64_encode($img);
                                     ?>
 
-                                    <img src="{!! $base64 !!}">
+                                    <img src="{!! $base64 !!}" class="profpic">
+                                   
 
                                     {{ Auth::user()->name }} <span class="caret"></span>
 </a>
