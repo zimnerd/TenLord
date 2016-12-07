@@ -5866,4 +5866,12 @@ strong {
   margin: 0px 0 10px;
   border-bottom: 1px solid #eeeeee; }
 
+img.profpic {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%; }
+
 /*# sourceMappingURL=app.css.map */
