@@ -12,9 +12,16 @@ class Unit extends Model
         return $this->belongsTo('App\Property');
     }
 
-    public function tenant()
+    public function tenants()
     {
         return $this->hasMany('App\Tenant');
     }
+
+    public function owner()
+    {
+        return $this->belongsTo('App\Owner');
+    }
     protected $guarded = [];
 }
+
+$unit = Unit::find(1);

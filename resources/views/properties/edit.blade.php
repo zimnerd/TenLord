@@ -6,7 +6,7 @@
 @section('content')
     <h2>Edit Property</h2>
 
-    {!! Form::model($property, ['method' => 'PATCH', 'route' => ['properties.update', $property->id]]) !!}
+    {!! Form::model($property, ['method' => 'PATCH', 'route' => ['properties.update', $property->id],'files' => true,'class' => 'form',]) !!}
     @include('properties/partials/_form', ['submit_text' => 'Edit Property'])
     {!! Form::close() !!}
 @endsection

@@ -61,13 +61,6 @@
 
 
 
-<div class="form-group col-lg-6">
-
-    {!! Form::label('unit_id', 'Allocate Unit') !!}
-    {!! Form::select('unit_id',  $property->units->pluck('name', 'id'), Input::old('unit_id'), ['class' => 'form-control']) !!}
-</div>
-
-
 <div class="form-group col-lg-12">
     {!! Form::submit($submit_text, ['class' => 'btn btn-large btn-primary'])!!}
 </div>

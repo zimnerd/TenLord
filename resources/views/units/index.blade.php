@@ -30,7 +30,7 @@
     @endif
 
     <p>
-        {!! link_to_route('properties.index', 'Back to Properties') !!} |
-        {!! link_to_route('properties.units.create', 'Create Unit', $property->id) !!}
+        {!! link_to_route('properties.index', 'Back to Properties','', array('class' => 'btn btn-info')) !!} |
+        {!! link_to_route('properties.units.create', 'Create Unit', $property->id,, array('class' => 'btn btn-success')) !!}
     </p>
 @endsection

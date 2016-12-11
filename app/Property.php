@@ -12,9 +12,9 @@ class Property extends Model
         return $this->hasMany('App\Unit');
     }
 
-    public function owner()
+    public function owners()
     {
-        return $this->belongsTo('App\Owner');
+        return $this->hasMany('App\Owner');
     }
     public function tenants()
     {

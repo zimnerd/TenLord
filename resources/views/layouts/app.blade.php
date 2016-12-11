@@ -16,9 +16,12 @@
     <link href="{{ URL::asset('js/bootstrap.min.js')}}" rel="javascript">
     <link href="{{ URL::asset('assets/js/bootstrap.min.js')}}" rel="javascript">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.js"></script>
+
     <!-- Scripts -->
     <script>
-        window.Laravel = <?php echo json_encode([
+        window.Laravel =; <?php echo json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
@@ -56,20 +59,22 @@
 
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li ><a href="{{ url('/login') }}"><span class="glyphicon glyphicon-lock"></span> Login</a></li>
-                            <li><a href="{{ url('/register') }}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                            <li ><a href="{{ url('/login') }}"><span class="glyphicon glyphicon-lock"></span>  Login</a></li>
+                            <li><a href="{{ url('/register') }}"><span class="glyphicon glyphicon-user"></span>  Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
+                                    <img src="/images/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="{{ url('/properties') }}">Properties</a></li>
+                                    <li><a href="{{ url('/profile') }}"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
+                                    <li><a href="{{ url('/properties') }}"><i class="glyphicon glyphicon-home"></i> Properties</a></li>
                                     <li>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                     document.getElementById('logout-form').submit();"><i class="glyphicon glyphicon-arrow-left"></i>
                                             Logout
                                         </a>
 
@@ -88,7 +93,7 @@
 
 
 
-        <div class="container">
+        <div class="container ">
             @if (Session::has('message'))
                 <div class="flash alert-info">
                     <p>{{ Session::get('message') }}</p>
@@ -105,7 +110,7 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="panel panel-default">
-                        <div class="panel-heading">@yield('title')</div>
+                        <div class="panel-heading"><h3>@yield('title')</h3></div>
 
                         <div class="panel-body">
                             @yield('content')
@@ -118,7 +123,7 @@
 
                     <div class="panel-body">
                         @yield('sidebar')
-                        Sidebar
+                        &copy; 2016. Copyright reserved.
                     </div>
 
                 </div>

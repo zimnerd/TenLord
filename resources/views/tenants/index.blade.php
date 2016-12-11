@@ -17,10 +17,10 @@
         <ul>
             @foreach( $property->tenants as $tenant )
                 <li>
-                    {!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('property.tenants.destroy', $property->id, $tenant->id))) !!}
-                    <a href="{{ route('property.tenant.show', [$property->id, $tenant->id]) }}">{{ $tenant->name }}</a>
+                    {!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('properties.units.tenants.destroy', $property->id, $unit->id,$tenant->id))) !!}
+                    <a href="{{ route('properties.units.tenants.show', [$property->id, $unit->id,$tenant->id]) }}">{{ $tenant->name }}</a>
 
-                    {!! link_to_route('properties.tenants.edit', 'Edit', array($property->id, $tenant->id), array('class' => 'btn btn-info')) !!},
+                    {!! link_to_route('properties.units.tenants.edit', 'Edit', array($property->id,$unit->id, $tenant->id), array('class' => 'btn btn-info')) !!},
 
                     {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
 
@@ -31,7 +31,7 @@
     @endif
 
     <p>
-        {!! link_to_route('properties.index', 'Back to Units') !!} |
-        {!! link_to_route('properties.tenants.create', 'Create Tenant', $property->id) !!}
+        {!! link_to_route('properties.index', 'Back to Properties','', array('class' => 'btn btn-info')) !!} |
+        {!! link_to_route('properties.units.tenants.create', 'Create Tenant', array($property->id,$unit->id), array('class' => 'btn btn-success')) !!}
     </p>
 @endsection

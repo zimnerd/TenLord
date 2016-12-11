@@ -5769,12 +5769,24 @@ button.close {
 label {
   display: block; }
 
-div > .tenlist:nth-child(2), .tenlist:nth-child(even) {
-  background-color: #dedede; }
+.tenlist:nth-child(even) {
+  background-color: #dedede;
+  border-right: 5px solid #2579a9;
+  border-bottom: 1px solid #2579a9;
+  border-left: 5px solid #2579a9;
+  border-top: 1px solid #2579a9; }
+
+div > .tenlist:nth-child(odd) {
+  background-color: rgba(211, 224, 233, 0.34);
+  border-left: 5px solid #a94442;
+  border-top: 1px solid #a94442;
+  border-right: 5px solid #a94442;
+  border-bottom: 1px solid #a94442; }
 
 div > .tenlist {
   padding: 5px;
-  border-bottom: 1px solid #fefefe; }
+  border-bottom: 1px solid #fefefe;
+  margin-bottom: 10px; }
 
 body {
   font-family: "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
@@ -5833,5 +5845,25 @@ strong {
 
 .panel-default > .panel-heading {
   background-color: #d3e0e9; }
+
+.units .unit, .units .tenant {
+  padding: 2px 0; }
+
+.featured img, .header-image img {
+  width: 100%;
+  height: auto; }
+
+.featured {
+  padding: 10px 20px 10px 7px;
+  max-height: 200px;
+  overflow: hidden; }
+
+.property-header {
+  margin-bottom: 35px; }
+
+.page-header {
+  padding-bottom: 10px;
+  margin: 0px 0 10px;
+  border-bottom: 1px solid #eeeeee; }
 
 /*# sourceMappingURL=app.css.map */

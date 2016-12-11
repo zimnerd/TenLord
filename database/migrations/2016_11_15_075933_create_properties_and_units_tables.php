@@ -15,12 +15,12 @@ class CreatePropertiesAndUnitsTables extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('number_of_units');
-            $table->integer('owner_id');
+            $table->integer('number_of_units')->nullable();
+            $table->integer('owner_id')->nullable();
             $table->string('location');
             $table->string('name');
-            $table->string('type');
-            $table->string('photos');
+            $table->string('type')->nullable();
+            $table->string('photos')->default('Home.png');
             $table->string('account');
             $table->string('country');
             $table->string('city');
@@ -33,7 +33,8 @@ class CreatePropertiesAndUnitsTables extends Migration
 
         Schema::create('units', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('tenant_id')->nullable()->references('id')->on('tenants')->onDelete('cascade')->onUpdate('cascade');;
+            $table->integer('tenant_id')->nullable();
+            $table->integer('tenant_id')->references('id')->on('tenants')->onDelete('cascade')->onUpdate('cascade');
             $table->string('size')->nullable();
             $table->integer('bedrooms')->nullable();
             $table->integer('unit_number')->nullable();
@@ -44,6 +45,8 @@ class CreatePropertiesAndUnitsTables extends Migration
             $table->float('rental_amount')->nullable();
             $table->float('market_rent')->nullable();
             $table->string('description')->nullable();
+            $table->integer('owner_id')->nullable();
+            $table->foreign('owner_id')->references('id')->on('owners')->onDelete('cascade');
             $table->integer('property_id')->unsigned()->default(0);
             $table->foreign('property_id')->references('id')->on('properties')->onDelete('cascade');
             $table->string('name')->nullable();

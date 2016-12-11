@@ -1,21 +1,28 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Unit;
+use App\Property;
+use App\User;
+
+use Illuminate\Auth\Notifications\Notifiable;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Input;
 use Redirect;
 use App\Tenant;
-use App\Property;
+use App\Notifications\tenantAdded;
+
+
+
 
 class TenantsController extends Controller
 {
     //
 
-    public function index(Property $property)
+    public function index(Property $property, Unit $unit)
     {
-        return view('tenants.index', compact('property'));
+        return view('tenants.index', compact('property','unit'));
     }
 
 
@@ -28,16 +35,15 @@ class TenantsController extends Controller
 
 
 
-    public function show(Property $property, Tenant $tenant)
+    public function show(Property $property,Unit $unit,Tenant $tenant)
     {
-
-        return view('tenants.show', compact('property', 'tenant'));
+        return view('tenants.show', compact('property','unit','tenant'));
     }
 
 
-    public function edit(Property $property, Tenant $tenant)
+    public function edit(Property $property,Unit $unit, Tenant $tenant)
     {
-        return view('tenants.edit', compact('property', 'tenant'));
+        return view('tenants.edit', compact('property', 'tenant','unit'));
     }
 
 
@@ -47,22 +53,36 @@ class TenantsController extends Controller
     ];
 
 
-    public function store(Property $property, Request $request)
+    public function store(Property $property, Tenant $tenant, Unit $unit,  Request $request)
     {
         $this->validate($request, $this->rules);
+       
 
         $input = Input::all();
         $input['property_id'] = $property->id;
+        $input['unit_id'] = $unit->id;
         Tenant::create( $input );
 
-        return Redirect::route('properties.show', $property->id)->with('Tenant created.');
+         $unit_id = $unit->id;
+        $tenant_id = $tenant->id;
+        $unit = Unit::all()->find($unit_id);
+        $unit->tenant_id = $tenant_id;
+        $unit->save();
+
+         $user = User::first();
+        $tenant = Tenant::orderBy('id', 'desc')->first();
+        $user->notify(new tenantAdded($tenant,$property,$unit));
+
+
+
+        return Redirect::route('properties.show', $property->id)->with('Tenant'. $tenant_id. ' created.');
     }
 
 
-    public function update(Property $property, Tenant $tenant, Unit $unit,  Request $request)
+    public function update(Property $property,  Unit $unit, Tenant $tenant, Request $request)
     {
         $this->validate($request, $this->rules);
-        $unit_id = $request->unit_id;
+        $unit_id = $unit->id;
         $tenant_id = $tenant->id;
         $unit = Unit::all()->find($unit_id);
         $unit->tenant_id = $tenant_id;
@@ -72,10 +92,10 @@ class TenantsController extends Controller
         $input = array_except(Input::all(), '_method');
         $tenant->update($input);
 
-        return Redirect::route('properties.tenants.show', [$property->id, $tenant->id])->with('message', '  Tenant updated.');
+        return Redirect::route('properties.units.tenants.show', [$property->id, $unit->id, $tenant->id])->with('message', '  Tenant updated.');
     }
 
-    public function destroy(Property $property, Tenant $tenant)
+    public function destroy(Property $property, Unit $unit, Tenant $tenant)
     {
         $tenant->delete();
 

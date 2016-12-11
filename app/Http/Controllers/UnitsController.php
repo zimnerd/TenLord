@@ -28,7 +28,7 @@ class UnitsController extends Controller
     
     public function show(Property $property, Unit $unit, Tenant $tenant)
     {
-        $tenant = Tenant::all()->find($unit->tenant_id);
+        $tenant = Tenant::all()->where('unit_id', $unit->id)->first();
         return view('units.show', compact('property', 'unit','tenant'));
     }
 

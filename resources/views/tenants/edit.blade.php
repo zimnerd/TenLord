@@ -5,7 +5,7 @@
 
 @section('content')
 
-    {!! Form::model($tenant, ['method' => 'PATCH', 'route' => ['properties.tenants.update', $property->id, $tenant->id]]) !!}
+    {!! Form::model($tenant, ['method' => 'PATCH', 'route' => ['properties.units.tenants.update', $property->id, $unit->id, $tenant->id]]) !!}
     @include('tenants/partials/_form', ['submit_text' => 'Edit Tenant'])
     {!! Form::close() !!}
 @endsection

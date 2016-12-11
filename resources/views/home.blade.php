@@ -45,12 +45,44 @@
     </div>
     <div class="col-sm-4">
         <div class="tile purple">
-            <h3 class="title"><span class="glyphicon glyphicon-pencil"></span> <a href="{{ url('#') }}">Reports</a></h3>
-            <p>No reports yet </p>
+            <h3 class="title"><span class="glyphicon glyphicon-pencil"></span> <a href="{{ url('/reports') }}">Reports</a></h3>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="{{ url('/reports') }}">Property - Unit reports</a> </li>
+
+            </ul>
 
         </div>
     </div>
 </div>
+
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="tile purple">
+            <h3 class="title"><span class="glyphicon glyphicon-home"></span> <a href="{{ url('/owners') }}">Owners</a></h3>
+            <p>{{ $owner->count() }} owners listed </p>
+
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="tile red">
+            <h3 class="title"><span class="glyphicon glyphicon-bed"></span> Units</h3>
+            <p>{{ $unit->count() }} units listed</p>
+            <p>{{ $unit->count() - $tenant->count() }}  free units </p>
+
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="tile orange">
+            <h3 class="title"><span class="glyphicon glyphicon-user"></span> Tenants</h3>
+            <p>{{ $tenant->count() }} tenants allocated</p>
+            <p>No applications.</p>
+        </div>
+    </div>
+</div>
+
+
+
 
 @else
     <h3 class="alert-danger"><span class="glyphicon glyphicon-lock"></span> You must login to view content</h3>

@@ -5,7 +5,8 @@
 @section('content')
     <h2>Create Property</h2>
 
-    {!! Form::model(new App\Property, ['route' => ['properties.store']]) !!}
+    {!! Form::model(new App\Property, ['route' => ['properties.store'],'files' => true,'class' => 'form']) !!}
     @include('properties/partials/_form', ['submit_text' => 'Create Property'])
     {!! Form::close() !!}
 @endsection
+
