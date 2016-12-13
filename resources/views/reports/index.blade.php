@@ -2,7 +2,7 @@
 @section('title', 'TenLord Reports')
 @section('Sidebar', 'Reports')
 @section('content')
-<div class="media-heading">Property - Units</div>
+<div class="media-heading">Properties Statistics</div>
         <div>
             <canvas id="units_graph" width="1000" height="400"></canvas>
 
@@ -19,14 +19,14 @@
 
                         var labels = [],data=[];
                         for (var i = 0; i < result.length; i++) {
-                            labels.push('Property ' + result[i].property_id);
-                            data.push(result[i].unit_count);
+                             labels.push(result[i].month);
+        data.push(result[i].properties);
                         }
 
-                        var unitData = {
+                        var propertyData = {
                             labels : labels,
                             datasets : [
-                                {label:'Units',
+                                {label:'Properties count: ',
                                     fillColor: "rgba(151,7,205,1)",
                                     strokeColor: "rgba(151,187,205,1)",
                                     pointColor: "rgba(151,187,205,1)",
@@ -41,7 +41,7 @@
 
                         var myNewChart = new Chart(ctx , {
                             type: "line",
-                            data: unitData,
+                            data: propertyData,
 
                             options: {
                                 scales: {

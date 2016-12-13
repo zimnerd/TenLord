@@ -1,0 +1,201 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/zimnerds/bin/node',
+1 verbose cli   '/home/zimnerds/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '[--save/--save-dev]',
+1 verbose cli   'clean-node-modules' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 warn package.json assert@1.4.1 assert is also the name of a node core module.
+5 warn package.json bcrypt-pbkdf@1.0.0 No repository field.
+6 warn package.json buffer@4.9.1 buffer is also the name of a node core module.
+7 warn package.json cli-usage@0.1.4 No repository field.
+8 warn package.json events@1.1.1 events is also the name of a node core module.
+9 warn package.json indexof@0.0.1 No repository field.
+10 warn package.json path@0.12.7 path is also the name of a node core module.
+11 warn package.json punycode@1.4.1 punycode is also the name of a node core module.
+12 warn package.json querystring@0.2.0 querystring is also the name of a node core module.
+13 warn package.json string_decoder@0.10.31 string_decoder is also the name of a node core module.
+14 warn package.json url@0.11.0 url is also the name of a node core module.
+15 warn package.json util@0.10.3 util is also the name of a node core module.
+16 warn package.json vue-template-es2015-compiler@1.2.3 No repository field.
+17 verbose readDependencies using package.json deps
+18 verbose cache add [ '[--save/--save-dev]', null ]
+19 verbose cache add name=undefined spec="[--save/--save-dev]" args=["[--save/--save-dev]",null]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: '[--save/--save-dev]',
+20 verbose parsed url   path: '[--save/--save-dev]',
+20 verbose parsed url   href: '[--save/--save-dev]' }
+21 verbose cache add [ 'clean-node-modules', null ]
+22 verbose cache add name=undefined spec="clean-node-modules" args=["clean-node-modules",null]
+23 verbose parsed url { protocol: null,
+23 verbose parsed url   slashes: null,
+23 verbose parsed url   auth: null,
+23 verbose parsed url   host: null,
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: null,
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: 'clean-node-modules',
+23 verbose parsed url   path: 'clean-node-modules',
+23 verbose parsed url   href: 'clean-node-modules' }
+24 silly lockFile 9ea8c0af-save-save-dev [--save/--save-dev]
+25 verbose lock [--save/--save-dev] /home/zimnerds/.npm/9ea8c0af-save-save-dev.lock
+26 silly lockFile 7daa4d75-clean-node-modules clean-node-modules
+27 verbose lock clean-node-modules /home/zimnerds/.npm/7daa4d75-clean-node-modules.lock
+28 info maybeGithub Attempting [--save/--save-dev] from git://github.com/[--save/--save-dev]
+29 silly lockFile a2ca2ced-git-github-com-save-save-dev git://github.com/[--save/--save-dev]
+30 verbose lock git://github.com/[--save/--save-dev] /home/zimnerds/.npm/a2ca2ced-git-github-com-save-save-dev.lock
+31 silly lockFile 7daa4d75-clean-node-modules clean-node-modules
+32 silly lockFile 7daa4d75-clean-node-modules clean-node-modules
+33 verbose addNamed [ 'clean-node-modules', '' ]
+34 verbose addNamed [ null, '*' ]
+35 silly lockFile aa449a0c-clean-node-modules clean-node-modules@
+36 verbose lock clean-node-modules@ /home/zimnerds/.npm/aa449a0c-clean-node-modules.lock
+37 verbose addRemoteGit [ 'git://github.com/[--save/--save-dev]', 'master' ]
+38 silly addNameRange { name: 'clean-node-modules', range: '*', hasData: false }
+39 verbose url raw clean-node-modules
+40 verbose url resolving [ 'https://registry.npmjs.org/', './clean-node-modules' ]
+41 verbose url resolved https://registry.npmjs.org/clean-node-modules
+42 info trying registry request attempt 1 at 13:41:02
+43 http GET https://registry.npmjs.org/clean-node-modules
+44 http 200 https://registry.npmjs.org/clean-node-modules
+45 silly registry.get cb [ 200,
+45 silly registry.get   { server: 'nginx/1.10.1',
+45 silly registry.get     'content-type': 'application/json',
+45 silly registry.get     'last-modified': 'Fri, 08 Apr 2016 11:13:37 GMT',
+45 silly registry.get     etag: '"57079261-37b5"',
+45 silly registry.get     'cache-control': 'max-age=300',
+45 silly registry.get     'content-length': '14261',
+45 silly registry.get     'accept-ranges': 'bytes',
+45 silly registry.get     date: 'Wed, 07 Dec 2016 13:41:03 GMT',
+45 silly registry.get     via: '1.1 varnish',
+45 silly registry.get     age: '0',
+45 silly registry.get     connection: 'keep-alive',
+45 silly registry.get     'x-served-by': 'cache-lcy1150-LCY',
+45 silly registry.get     'x-cache': 'MISS',
+45 silly registry.get     'x-cache-hits': '0',
+45 silly registry.get     'x-timer': 'S1481118063.140399,VS0,VE34',
+45 silly registry.get     vary: 'Accept-Encoding' } ]
+46 silly addNameRange number 2 { name: 'clean-node-modules', range: '*', hasData: true }
+47 silly addNameRange versions [ 'clean-node-modules',
+47 silly addNameRange   [ '1.0.0',
+47 silly addNameRange     '1.0.1',
+47 silly addNameRange     '1.0.2',
+47 silly addNameRange     '2.0.0',
+47 silly addNameRange     '2.0.1',
+47 silly addNameRange     '2.1.0',
+47 silly addNameRange     '2.1.1',
+47 silly addNameRange     '2.1.2',
+47 silly addNameRange     '2.1.3' ] ]
+48 verbose addNamed [ 'clean-node-modules', '2.1.3' ]
+49 verbose addNamed [ '2.1.3', '2.1.3' ]
+50 silly lockFile 733debf5-clean-node-modules-2-1-3 clean-node-modules@2.1.3
+51 verbose lock clean-node-modules@2.1.3 /home/zimnerds/.npm/733debf5-clean-node-modules-2-1-3.lock
+52 silly lockFile 92f2ff2f-les-clean-node-modules-2-1-3-tgz https://registry.npmjs.org/clean-node-modules/-/clean-node-modules-2.1.3.tgz
+53 verbose lock https://registry.npmjs.org/clean-node-modules/-/clean-node-modules-2.1.3.tgz /home/zimnerds/.npm/92f2ff2f-les-clean-node-modules-2-1-3-tgz.lock
+54 verbose addRemoteTarball [ 'https://registry.npmjs.org/clean-node-modules/-/clean-node-modules-2.1.3.tgz',
+54 verbose addRemoteTarball   'a43911f759adf40a19b931c4d3eec1bd0e25b602' ]
+55 info retry fetch attempt 1 at 13:41:03
+56 verbose fetch to= /home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/tmp.tgz
+57 http GET https://registry.npmjs.org/clean-node-modules/-/clean-node-modules-2.1.3.tgz
+58 http 200 https://registry.npmjs.org/clean-node-modules/-/clean-node-modules-2.1.3.tgz
+59 verbose tar unpack /home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/tmp.tgz
+60 silly lockFile 9e33b978-3479-0-05498098535463214-package tar:///home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/package
+61 verbose lock tar:///home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/package /home/zimnerds/.npm/9e33b978-3479-0-05498098535463214-package.lock
+62 silly lockFile 8c585b6c-3479-0-05498098535463214-tmp-tgz tar:///home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/tmp.tgz
+63 verbose lock tar:///home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/tmp.tgz /home/zimnerds/.npm/8c585b6c-3479-0-05498098535463214-tmp-tgz.lock
+64 silly gunzTarPerm modes [ '755', '644' ]
+65 silly gunzTarPerm extractEntry package.json
+66 silly gunzTarPerm extractEntry .npmignore
+67 silly gunzTarPerm extractEntry index.js
+68 silly gunzTarPerm extractEntry ignore.json
+69 silly gunzTarPerm extractEntry readme.md
+70 silly gunzTarPerm modified mode [ 'readme.md', 438, 420 ]
+71 silly lockFile 9e33b978-3479-0-05498098535463214-package tar:///home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/package
+72 silly lockFile 9e33b978-3479-0-05498098535463214-package tar:///home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/package
+73 silly lockFile 8c585b6c-3479-0-05498098535463214-tmp-tgz tar:///home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/tmp.tgz
+74 silly lockFile 8c585b6c-3479-0-05498098535463214-tmp-tgz tar:///home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/tmp.tgz
+75 verbose tar pack [ '/home/zimnerds/.npm/clean-node-modules/2.1.3/package.tgz',
+75 verbose tar pack   '/home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/package' ]
+76 verbose tarball /home/zimnerds/.npm/clean-node-modules/2.1.3/package.tgz
+77 verbose folder /home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/package
+78 silly lockFile 9e33b978-3479-0-05498098535463214-package tar:///home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/package
+79 verbose lock tar:///home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/package /home/zimnerds/.npm/9e33b978-3479-0-05498098535463214-package.lock
+80 silly lockFile b21b227c-n-node-modules-2-1-3-package-tgz tar:///home/zimnerds/.npm/clean-node-modules/2.1.3/package.tgz
+81 verbose lock tar:///home/zimnerds/.npm/clean-node-modules/2.1.3/package.tgz /home/zimnerds/.npm/b21b227c-n-node-modules-2-1-3-package-tgz.lock
+82 silly lockFile 9e33b978-3479-0-05498098535463214-package tar:///home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/package
+83 silly lockFile 9e33b978-3479-0-05498098535463214-package tar:///home/zimnerds/tmp/npm-853-MnWEcmN2/1481118063479-0.05498098535463214/package
+84 silly lockFile b21b227c-n-node-modules-2-1-3-package-tgz tar:///home/zimnerds/.npm/clean-node-modules/2.1.3/package.tgz
+85 silly lockFile b21b227c-n-node-modules-2-1-3-package-tgz tar:///home/zimnerds/.npm/clean-node-modules/2.1.3/package.tgz
+86 silly lockFile c6cbee5b-clean-node-modules-2-1-3-package /home/zimnerds/.npm/clean-node-modules/2.1.3/package
+87 verbose lock /home/zimnerds/.npm/clean-node-modules/2.1.3/package /home/zimnerds/.npm/c6cbee5b-clean-node-modules-2-1-3-package.lock
+88 silly lockFile c6cbee5b-clean-node-modules-2-1-3-package /home/zimnerds/.npm/clean-node-modules/2.1.3/package
+89 silly lockFile c6cbee5b-clean-node-modules-2-1-3-package /home/zimnerds/.npm/clean-node-modules/2.1.3/package
+90 verbose tar unpack /home/zimnerds/.npm/clean-node-modules/2.1.3/package.tgz
+91 silly lockFile 7ed3b62f-clean-node-modules-2-1-3-package tar:///home/zimnerds/.npm/clean-node-modules/2.1.3/package
+92 verbose lock tar:///home/zimnerds/.npm/clean-node-modules/2.1.3/package /home/zimnerds/.npm/7ed3b62f-clean-node-modules-2-1-3-package.lock
+93 silly lockFile b21b227c-n-node-modules-2-1-3-package-tgz tar:///home/zimnerds/.npm/clean-node-modules/2.1.3/package.tgz
+94 verbose lock tar:///home/zimnerds/.npm/clean-node-modules/2.1.3/package.tgz /home/zimnerds/.npm/b21b227c-n-node-modules-2-1-3-package-tgz.lock
+95 silly gunzTarPerm modes [ '755', '644' ]
+96 silly gunzTarPerm extractEntry package.json
+97 silly gunzTarPerm extractEntry .npmignore
+98 silly gunzTarPerm extractEntry index.js
+99 silly gunzTarPerm extractEntry ignore.json
+100 silly gunzTarPerm extractEntry readme.md
+101 silly lockFile 7ed3b62f-clean-node-modules-2-1-3-package tar:///home/zimnerds/.npm/clean-node-modules/2.1.3/package
+102 silly lockFile 7ed3b62f-clean-node-modules-2-1-3-package tar:///home/zimnerds/.npm/clean-node-modules/2.1.3/package
+103 silly lockFile b21b227c-n-node-modules-2-1-3-package-tgz tar:///home/zimnerds/.npm/clean-node-modules/2.1.3/package.tgz
+104 silly lockFile b21b227c-n-node-modules-2-1-3-package-tgz tar:///home/zimnerds/.npm/clean-node-modules/2.1.3/package.tgz
+105 verbose chmod /home/zimnerds/.npm/clean-node-modules/2.1.3/package.tgz 644
+106 verbose chown /home/zimnerds/.npm/clean-node-modules/2.1.3/package.tgz [ 1252, 1252 ]
+107 silly lockFile 92f2ff2f-les-clean-node-modules-2-1-3-tgz https://registry.npmjs.org/clean-node-modules/-/clean-node-modules-2.1.3.tgz
+108 silly lockFile 92f2ff2f-les-clean-node-modules-2-1-3-tgz https://registry.npmjs.org/clean-node-modules/-/clean-node-modules-2.1.3.tgz
+109 silly lockFile 733debf5-clean-node-modules-2-1-3 clean-node-modules@2.1.3
+110 silly lockFile 733debf5-clean-node-modules-2-1-3 clean-node-modules@2.1.3
+111 silly lockFile aa449a0c-clean-node-modules clean-node-modules@
+112 silly lockFile aa449a0c-clean-node-modules clean-node-modules@
+113 verbose git clone git://github.com/[--save/--save-dev] Cloning into bare repository '/home/zimnerds/.npm/_git-remotes/git-github-com-save-save-dev--a2ca2ced'...
+113 verbose git clone git://github.com/[--save/--save-dev]
+113 verbose git clone git://github.com/[--save/--save-dev] fatal: unable to connect to github.com:
+113 verbose git clone git://github.com/[--save/--save-dev] github.com[0: 192.30.253.112]: errno=Connection timed out
+113 verbose git clone git://github.com/[--save/--save-dev] github.com[1: 192.30.253.113]: errno=Connection timed out
+114 silly lockFile a2ca2ced-git-github-com-save-save-dev git://github.com/[--save/--save-dev]
+115 silly lockFile a2ca2ced-git-github-com-save-save-dev git://github.com/[--save/--save-dev]
+116 info maybeGithub Attempting [--save/--save-dev] from git+ssh://git@github.com:[--save/--save-dev]
+117 silly lockFile b0801242-ssh-git-github-com-save-save-dev git+ssh://git@github.com:[--save/--save-dev]
+118 verbose lock git+ssh://git@github.com:[--save/--save-dev] /home/zimnerds/.npm/b0801242-ssh-git-github-com-save-save-dev.lock
+119 verbose addRemoteGit [ 'git@github.com:[--save/--save-dev]', 'master' ]
+120 error git clone git@github.com:[--save/--save-dev] Cloning into bare repository '/home/zimnerds/.npm/_git-remotes/git-github-com-save-save-dev--68e9312e'...
+120 error git clone git@github.com:[--save/--save-dev]
+120 error git clone git@github.com:[--save/--save-dev] Permission denied (publickey).
+120 error git clone git@github.com:[--save/--save-dev] fatal: Could not read from remote repository.
+120 error git clone git@github.com:[--save/--save-dev]
+120 error git clone git@github.com:[--save/--save-dev] Please make sure you have the correct access rights
+120 error git clone git@github.com:[--save/--save-dev] and the repository exists.
+121 silly lockFile 68e9312e-git-github-com-save-save-dev git@github.com:[--save/--save-dev]
+122 silly lockFile 9ea8c0af-save-save-dev [--save/--save-dev]
+123 silly lockFile 9ea8c0af-save-save-dev [--save/--save-dev]
+124 error addLocal Could not install [--save/--save-dev]
+125 error Error: ENOENT, stat '[--save/--save-dev]'
+126 error If you need help, you may report this *entire* log,
+126 error including the npm and node versions, at:
+126 error     <http://github.com/isaacs/npm/issues>
+127 error System Linux 2.6.32-042stab113.21
+128 error command "/home/zimnerds/bin/node" "/home/zimnerds/bin/npm" "install" "[--save/--save-dev]" "clean-node-modules"
+129 error cwd /home/zimnerds/public_html/tenlord
+130 error node -v v0.10.24
+131 error npm -v 1.3.21
+132 error path [--save/--save-dev]
+133 error code ENOENT
+134 error errno 34
+135 verbose exit [ 34, true ]

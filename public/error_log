@@ -31,3 +31,4 @@
 [07-Dec-2016 11:34:00 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/laravel/storage/framework/views/0fa306f98694193104b4431f4a1da4a518207462.php on line 69
 [07-Dec-2016 11:42:45 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/tenlord/storage/framework/views/7f1ac7584cb420807c6555afc419dc68806265cb.php on line 69
 [07-Dec-2016 11:44:23 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/tenlord/storage/framework/views/7f1ac7584cb420807c6555afc419dc68806265cb.php on line 69
+[11-Dec-2016 11:23:44 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/zimnerds/public_html/tenlord/storage/framework/views/1ef7c3d868db890379809132c04d5189279c68ff.php on line 37

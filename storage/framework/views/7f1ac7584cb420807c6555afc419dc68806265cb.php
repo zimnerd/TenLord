@@ -65,9 +65,17 @@
                         <?php else: ?>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
-                                    <img src="../storage/app/public/images/avatars/<?php echo e(Auth::user()->avatar); ?>" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%">
-                                 
-                                    
+                                    <?php
+                                    $img = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/avatars/'.Auth::user()->avatar ));
+
+                                    $img->encode('png');
+                                    $type = 'png';
+                                    $base64 = 'data:image/' . $type . ';base64,' . base64_encode($img);
+                                    ?>
+
+                                    <img src="<?php echo $base64; ?>" class="profpic">
+                                   
+
                                     <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
 </a>
 

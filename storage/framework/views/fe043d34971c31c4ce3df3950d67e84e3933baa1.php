@@ -1,13 +1,26 @@
 <!-- /resources/views/properties/index.blade.php -->
 
+<?php $__env->startSection('title', 'Properties Listing'); ?>
+<?php $__env->startSection('Sidebar', 'Quick Links'); ?>
+<?php $__env->startSection('sidebar'); ?>
+    @parent
+   List your properties
+<?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
 
     <?php if( !$properties->count() ): ?>
         You have no properties
     <?php else: ?>
             <?php $__currentLoopData = $properties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $property): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+                <?php if($property->photos != null): ?>
+                <?php
+                $imgs = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/properties/'.$property->photos ));
 
-
+                $imgs->encode('png');
+                $type = 'png';
+                $base64s = 'data:image/' . $type . ';base64,' . base64_encode($imgs);
+                ?>
+                <?php endif; ?>
                 <div class="tenlist row">
 
 
@@ -15,7 +28,7 @@
 
 
                         <?php if($property->photos != null): ?>
-                            <div class="col-md-3 featured" ><img src="/images/properties/<?php echo e($property->photos); ?>"></div>
+                            <div class="col-md-3 featured" ><img src="<?php echo $base64s; ?>"></div>
                         <?php else: ?>
                             <div class="col-md-3 featured" ><img src="/images/properties/Home.png"></div>
                         <?php endif; ?>

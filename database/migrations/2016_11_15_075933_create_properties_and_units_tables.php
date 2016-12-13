@@ -15,7 +15,6 @@ class CreatePropertiesAndUnitsTables extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('number_of_units')->nullable();
             $table->integer('owner_id')->nullable();
             $table->string('location');
             $table->string('name');
@@ -34,7 +33,7 @@ class CreatePropertiesAndUnitsTables extends Migration
         Schema::create('units', function(Blueprint $table) {
             $table->increments('id');
             $table->integer('tenant_id')->nullable();
-            $table->integer('tenant_id')->references('id')->on('tenants')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('cascade')->onUpdate('cascade');
             $table->string('size')->nullable();
             $table->integer('bedrooms')->nullable();
             $table->integer('unit_number')->nullable();

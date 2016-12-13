@@ -1,15 +1,18 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Unit;
 use App\Property;
+use App\User;
 
-
+use Illuminate\Auth\Notifications\Notifiable;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Input;
 use Redirect;
 use App\Tenant;
+use App\Notifications\tenantAdded;
+
 
 
 
@@ -65,6 +68,12 @@ class TenantsController extends Controller
         $unit = Unit::all()->find($unit_id);
         $unit->tenant_id = $tenant_id;
         $unit->save();
+
+         $user = User::first();
+        $tenant = Tenant::orderBy('id', 'desc')->first();
+        $user->notify(new tenantAdded($tenant,$property,$unit));
+
+
 
         return Redirect::route('properties.show', $property->id)->with('Tenant'. $tenant_id. ' created.');
     }

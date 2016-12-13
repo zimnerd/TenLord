@@ -34,11 +34,14 @@ class PropertiesController extends Controller
     public function getProperties(Property $property)
     {
 
-        $units = DB::table('units')
-            ->select(DB::raw('count(*) as unit_count, property_id'))
-            ->groupBy('property_id')
+        
+        
+        $properties = DB::table('properties')
+            ->select(DB::raw('MONTHNAME(updated_at) as month'), DB::raw("DATE_FORMAT(updated_at,'%Y-%m') as monthNum"), DB::raw('count(*) as properties'))
+            ->groupBy('monthNum','month')
             ->get();
-        return Response::json($units);
+
+        return Response::json($properties);
 
     }
 

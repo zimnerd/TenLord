@@ -6,10 +6,17 @@
     @parent
     <div><span class="glyphicon glyphicon-home"></span> <a href="<?php echo e(route('properties.index', [$property->id])); ?>"><?php echo e(' ' .$property->count() . ' properties in total'); ?></a></div>
     <?php $__currentLoopData = $properties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $propert): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+        <?php
+        $imgss = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/properties/'.$propert->photos ));
+
+        $imgss->encode('png');
+        $type = 'png';
+        $base64ss = 'data:image/' . $type . ';base64,' . base64_encode($imgss);
+        ?>
 
             <?php if($propert->photos != null): ?>
                 <h3><?php echo e($propert->name); ?></h3>
-                <div class="col-md-12 featured" > <a href="<?php echo e(route('properties.show', $propert->id)); ?>"><img src="/images/properties/<?php echo e($propert->photos); ?>"></a></div>
+                <div class="col-md-12 featured" > <a href="<?php echo e(route('properties.show', $propert->id)); ?>"><img src="<?php echo $base64ss; ?>" class="propertypic"></a></div>
             <?php else: ?>
                 <div class="col-md-12 featured" > <a href="<?php echo e(route('properties.show', $propert->id)); ?>"><img src="/images/properties/Home.png"></a></div>
             <?php endif; ?>
@@ -23,7 +30,15 @@
 
 
 <?php if($property->photos != null): ?>
-        <div class="col-md-6 header-image" ><img src="/images/properties/<?php echo e($property->photos); ?>"></div>
+        <?php
+        $imgsss = Image::make(file_get_contents('http://tenlord.zimnerds.com/images/properties/'.$propert->photos ));
+
+        $imgsss->encode('png');
+        $type = 'png';
+        $base64sss = 'data:image/' . $type . ';base64,' . base64_encode($imgsss);
+        ?>
+
+        <div class="col-md-6 header-image" ><img src="<?php echo $base64sss; ?>"></div>
     <?php else: ?>
         <div class="col-md-6 header-image" ><img src="/images/properties/Home.png"></div>
     <?php endif; ?>
