@@ -27,7 +27,7 @@ Route::resource('properties.units.tenants', 'TenantsController');
 Route::resource('properties.units.owners', 'OwnersController');
 Route::post('profile', 'UserController@update_avatar');
 Route::get('profile', 'UserController@profile');
-
+Route::get('notifications', 'UserController@notifications');
 
 Route::get('property', 'PropertiesController@getProperties');
 Route::get('tenants', 'PropertiesController@getTenants');

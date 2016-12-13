@@ -32,3 +32,29 @@
 [07-Dec-2016 11:42:45 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/tenlord/storage/framework/views/7f1ac7584cb420807c6555afc419dc68806265cb.php on line 69
 [07-Dec-2016 11:44:23 UTC] PHP Fatal error:  Class 'HTML' not found in /home/zimnerds/public_html/tenlord/storage/framework/views/7f1ac7584cb420807c6555afc419dc68806265cb.php on line 69
 [11-Dec-2016 11:23:44 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/zimnerds/public_html/tenlord/storage/framework/views/1ef7c3d868db890379809132c04d5189279c68ff.php on line 37
+[13-Dec-2016 10:54:13 UTC] PHP Fatal error:  Class 'App\Http\Controllers\App\User' not found in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 14
+[13-Dec-2016 10:54:32 UTC] PHP Fatal error:  Class 'App\Http\Controllers\User' not found in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 14
+[13-Dec-2016 10:54:35 UTC] PHP Fatal error:  Class 'App\Http\Controllers\User' not found in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 14
+[13-Dec-2016 10:55:03 UTC] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting ',' or ';' in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 11
+[13-Dec-2016 12:24:27 UTC] PHP Parse error:  syntax error, unexpected '$json' (T_VARIABLE) in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 48
+[13-Dec-2016 12:24:54 UTC] PHP Parse error:  syntax error, unexpected '$note' (T_VARIABLE) in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 48
+[13-Dec-2016 12:25:54 UTC] PHP Fatal error:  Cannot use [] for reading in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 47
+[13-Dec-2016 12:25:54 UTC] PHP Fatal error:  Cannot use [] for reading in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 47
+[13-Dec-2016 12:27:55 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 46
+[13-Dec-2016 12:28:10 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Tenant' not found in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 46
+[13-Dec-2016 12:28:32 UTC] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting ',' or ';' in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 12
+[13-Dec-2016 12:30:46 UTC] PHP Parse error:  syntax error, unexpected '$tenant' (T_VARIABLE) in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 49
+[13-Dec-2016 12:31:59 UTC] PHP Parse error:  syntax error, unexpected '$tenant_id' (T_VARIABLE) in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 50
+[13-Dec-2016 12:39:18 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 52
+[13-Dec-2016 12:42:04 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 53
+[13-Dec-2016 12:43:22 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 53
+[13-Dec-2016 12:44:37 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 50
+[13-Dec-2016 13:32:54 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/zimnerds/public_html/tenlord/storage/framework/views/980a7f886ba965d197d98a7e07676eb70929d003.php on line 35
+[13-Dec-2016 13:37:24 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 50
+[13-Dec-2016 13:38:32 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zimnerds/public_html/tenlord/app/Http/Controllers/UserController.php on line 50
+[13-Dec-2016 14:01:56 UTC] PHP Parse error:  syntax error, unexpected '$notification' (T_VARIABLE) in /home/zimnerds/public_html/tenlord/storage/framework/views/980a7f886ba965d197d98a7e07676eb70929d003.php on line 37
+[13-Dec-2016 14:03:23 UTC] PHP Parse error:  syntax error, unexpected '$notification' (T_VARIABLE) in /home/zimnerds/public_html/tenlord/storage/framework/views/980a7f886ba965d197d98a7e07676eb70929d003.php on line 37
+[13-Dec-2016 14:03:50 UTC] PHP Parse error:  syntax error, unexpected '$notification' (T_VARIABLE) in /home/zimnerds/public_html/tenlord/storage/framework/views/980a7f886ba965d197d98a7e07676eb70929d003.php on line 37
+[13-Dec-2016 14:05:06 UTC] PHP Parse error:  syntax error, unexpected '$user' (T_VARIABLE) in /home/zimnerds/public_html/tenlord/storage/framework/views/980a7f886ba965d197d98a7e07676eb70929d003.php on line 40
+[13-Dec-2016 14:44:37 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/zimnerds/public_html/tenlord/app/Notifications/tenantAdded.php on line 74
+[13-Dec-2016 15:10:54 UTC] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home/zimnerds/public_html/tenlord/storage/framework/views/980a7f886ba965d197d98a7e07676eb70929d003.php on line 58

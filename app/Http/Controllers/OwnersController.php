@@ -46,6 +46,14 @@ class OwnersController extends Controller
     protected $rules = [
         'name' => ['required', 'min:3'],
     ];
+    
+    public function __construct(Owner $owner,Property $property, Unit $unit)
+    {
+        //
+        $this->owner = $owner;
+        $this->property = $property;
+        $this->unit = $unit;
+    }
 
 
     public function store(Property $property, Request $request, Unit $unit, Owner $owner )
@@ -62,7 +70,7 @@ class OwnersController extends Controller
 
 
 
-        return Redirect::route('properties.show', $property->id)->with('message', 'Owner created.');
+        return Redirect::route('properties.show', $property->id)->with('message', 'Owner created successfully.' .$this->owner->name);
     }
 
 

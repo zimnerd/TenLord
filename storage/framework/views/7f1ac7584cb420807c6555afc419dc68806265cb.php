@@ -80,6 +80,8 @@
 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                
+                                    <li><a href="<?php echo e(url('/profile#messages')); ?>"><i class="glyphicon glyphicon-envelope"></i> Notifications <span class="badge danger"><?php echo e(Auth::user()->unreadNotifications->count()); ?></span></a></li>
                                     <li><a href="<?php echo e(url('/profile')); ?>"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
                                     <li><a href="<?php echo e(url('/properties')); ?>"><i class="glyphicon glyphicon-home"></i> Properties</a></li>
                                     <li>

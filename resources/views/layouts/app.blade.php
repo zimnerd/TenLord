@@ -79,6 +79,8 @@
 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                
+                                    <li><a href="{{ url('/profile#messages') }}"><i class="glyphicon glyphicon-envelope"></i> Notifications <span class="badge danger">{{Auth::user()->unreadNotifications->count()}}</span></a></li>
                                     <li><a href="{{ url('/profile') }}"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
                                     <li><a href="{{ url('/properties') }}"><i class="glyphicon glyphicon-home"></i> Properties</a></li>
                                     <li>

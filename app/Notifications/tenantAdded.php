@@ -35,7 +35,7 @@ class tenantAdded extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail','database'];
     }
 
     /**
@@ -50,9 +50,11 @@ class tenantAdded extends Notification
 
 
         return (new MailMessage)
-
-                    ->line('New Tenant Added.')
-                    ->action('View Tenant', $url)
+        
+		 ->subject('New Tenant -  ' .$this->tenant->name)
+                    ->line('Property Name : '.$this->property->name)
+                     ->line('Unit Number :  '.$this->unit->unit_number)
+                    ->action('View Tenant '.$this->tenant->name, $url)
                     ->line('Thank you for using TenLord!');
     }
 
@@ -62,10 +64,14 @@ class tenantAdded extends Notification
      * @param  mixed  $notifiable
      * @return array
      */
-    public function toArray($notifiable)
+    public function toDatabase($notifiable)
     {
-        return [
-            //
-        ];
+     $url =    route('properties.units.tenants.show', [$this->property->id, $this->unit->id,$this->tenant->id]);
+         return [
+        'tenant_id' => $this->tenant->id,
+        'property_id' => $this->property->id,
+        'unit_id' => $this->unit->id,
+        'url'=>$url,
+    ];
     }
 }
